@@ -260,7 +260,7 @@ def AGS4_to_excel(input_file, output_file, encoding='utf-8', rename_duplicate_he
 
     # Exit if there is no AGS4 tables in the input file
     if len(list_of_tables) == 0:
-        rprint(f'[red]  ERROR: No valid AGS4 data found in input file.[/red]')
+        rprint('[red]  ERROR: No valid AGS4 data found in input file.[/red]')
         raise AGS4Error('No valid AGS4 data found in input file.')
 
     # Write to Excel file
@@ -412,7 +412,7 @@ def excel_to_AGS4(input_file, output_file, format_numeric_columns=True, dictiona
 
     # Export dictionary of DataFrames to AGS4 file
     if len(valid_tables) == 0:
-        rprint(f'[red]  ERROR: No valid AGS4 data found in input file. Please see warning messages above.[/red]')
+        rprint('[red]  ERROR: No valid AGS4 data found in input file. Please see warning messages above.[/red]')
     else:
         dataframe_to_AGS4({key: tables[key] for key in valid_tables}, {}, output_file, warnings=False)
 
